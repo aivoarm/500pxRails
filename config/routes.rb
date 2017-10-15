@@ -4,9 +4,7 @@ Rails.application.routes.draw do
 
   get 'pictures/index:id' => 'pictures#index'
 
-  get 'courses/index'
-
-  root "angular#index"
+  root "pictures#index"
   get 'pictures/api' => 'pictures#api', :defaults => { :format => 'json' }, as: :query
 
 
