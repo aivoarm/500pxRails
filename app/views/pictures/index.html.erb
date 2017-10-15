@@ -1,24 +1,48 @@
+
+
+
+<div class="" ng-app='app'>
+<div class="" ng-controller='PicLoadController'>
+
+
+
 <h1>500px on Rails</h1>
 
+<%=  @pics%>
 
+<p> {{current_page}} </p>
+<button type="button" name="button" ng-click = "nextPage()">Next Page</button>
 
-<hr>
+<Table>
+<tr>
 
-<table>
-  <%@pics.each do |p|%>
+<td class="" ng-repeat="cat in categories"><button type="button" name="button" ng-click="chooseCat(cat)" >{{cat}}</button></td>
 
-  <tr class=<%= cycle('even', 'odd') %>>
-      <a href = "<%= @url+ p['url']%> ">
-    <td ><%= image_tag(p['image_url'])%>
+</tr>
 
+</Table>
 
-    <p class="name"> <%= p['name']%> by <%= p['user']['fullname']%></p>
-  </a>
+<Table>
 
+  <tr ng-repeat="prop in data | filter : search ">
+
+    <td >
+      <div class="thumbnail text-center">
+        <img src="{{prop.image_url}}" class="img-responsive" width="1080">
+
+        <!-- <div class=""> Category: {{prop.category}} </div> -->
+        <div class="caption"> <a href='https://500px.com{{prop.url}}'> <p> {{prop.name}}</p> </a></div>
+
+      </div>
     </td>
 
 
-  </tr>
-  <% end %>
-</table>
-  <%@pics[0]%>
+</tr>
+
+</Table>
+
+
+
+
+  </div>
+</div>
