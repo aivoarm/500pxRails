@@ -1,0 +1,22 @@
+// Place all the styles related to the pictures controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+table{
+  border-collapse: collapse;
+}
+tr{
+  padding: 12px
+}
+.even{
+  background-color: #D6E1C3
+}
+.name{
+  position: absolute;
+  color: white;
+  margin: -50px 16px 0px
+}
+.user{
+  position: absolute;
+  color: white;
+  margin: -50px 160px 0px
+}

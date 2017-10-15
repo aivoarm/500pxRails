@@ -1,0 +1,24 @@
+<h1>500px on Rails</h1>
+
+
+
+<hr>
+
+<table>
+  <%@pics.each do |p|%>
+
+  <tr class=<%= cycle('even', 'odd') %>>
+      <a href = "<%= @url+ p['url']%> ">
+    <td ><%= image_tag(p['image_url'])%>
+
+
+    <p class="name"> <%= p['name']%> by <%= p['user']['fullname']%></p>
+  </a>
+
+    </td>
+
+
+  </tr>
+  <% end %>
+</table>
+  <%@pics[0]%>
