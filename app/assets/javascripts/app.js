@@ -30,7 +30,7 @@ $scope.nextPage = function(){
 
     serviceFactory.categories('popular', $scope.current_page).then(function(r){
        $scope.categories = (r);
-        
+
       })
   //return $scope.current_page
 }
@@ -80,7 +80,7 @@ function serviceFactory($q, $http){
      feature = feature || 'pupolar'
      page = page || 1
 
-     var dataUrl = 'http://localhost:3000/pictures/api/'+"?feature='"+feature + "&current_page="+ page
+     var dataUrl = '/pictures/api/'+"?feature='"+feature + "&current_page="+ page
 
      var promise = $http.get(dataUrl).then(function (response) {
        return response.data;
@@ -93,7 +93,7 @@ function serviceFactory($q, $http){
      feature = feature || 'pupolar'
      page = page || 1
 
-     var promise = $http.get('http://localhost:3000/pictures/categories'+"?feature='"+feature + "&current_page="+ page).then(function (response) {
+     var promise = $http.get('/pictures/categories'+"?feature='"+feature + "&current_page="+ page).then(function (response) {
        return response.data;
      });
      return promise;
