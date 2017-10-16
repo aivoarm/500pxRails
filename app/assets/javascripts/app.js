@@ -6,10 +6,18 @@ angular.module('app', [])
 .factory('serviceFactory', serviceFactory )
 .directive('data', function(){
   return {
-    template: 'data',
-    link: function(scope, elem, attr) {
 
-      //console.log(attr)
+    link: function(scope, element, attr) {
+
+
+    $(element).on("mouseover", function() {
+      $(element).css({ "width": "1080" });
+    });
+    $(element).on('mouseout',function() {
+      $(element).css({ "width": "800" });
+    });
+
+    console.log(paragraph)
     /* link function */ },
 
 

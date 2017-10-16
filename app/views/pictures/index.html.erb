@@ -8,15 +8,15 @@
 
 <h1>500px on Rails</h1>
 
-<%=  @pics%>
+
 
 <p> {{current_page}} </p>
-<button type="button" name="button" ng-click = "nextPage()">Next Page</button>
+<button type="button" name="button" class="btn " ng-click = "nextPage()">Next Page</button>
 
 <Table>
 <tr>
 
-<td class="" ng-repeat="cat in categories"><button type="button" name="button" ng-click="chooseCat(cat)" >{{cat}}</button></td>
+  <td class="" ng-repeat="cat in categories"><button class="btn btn-link"  type="button" name="button" ng-click="chooseCat(cat)" >{{cat}}</button></td>
 
 </tr>
 
@@ -28,7 +28,7 @@
 
     <td >
       <div class="thumbnail text-center">
-        <img src="{{prop.image_url}}" class="img-responsive" width="1080">
+    <img data src="{{prop.image_url}}" class="img-responsive" width="600">
 
         <!-- <div class=""> Category: {{prop.category}} </div> -->
         <div class="caption"> <a href='https://500px.com{{prop.url}}'> <p> {{prop.name}}</p> </a></div>
@@ -40,7 +40,7 @@
 </tr>
 
 </Table>
-
+>
 
 
 
