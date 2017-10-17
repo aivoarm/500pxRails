@@ -1,11 +1,9 @@
 class Picture
 
-  # init: function(){_500px.init({
-  #     sdk_key: 'a7b09a291baf4d118ba963cbf688188645447e3a'
-  #   })},
+  # 
   include HTTParty
   base_uri 'https://api.500px.com/v1/photos'
-  default_params sdk_key: 'a7b09a291baf4d118ba963cbf688188645447e3a'
+  default_params sdk_key: 'use your api key here'
   format :json
   #
   # feature=popular
